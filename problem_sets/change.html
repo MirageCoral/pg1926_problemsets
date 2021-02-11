@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Change Calculator</title>
+  </head>
+  <body>
+    <p>Para Üstü Hesaplama</p>
+    <span>Kuruş:</span>
+    <input type="text" id="input" size="70" value="" />
+    <button id="button">submit</button>
+
+    <script type="text/javascript">
+      function amountTocoins() {
+        var originalNum = +input.value;
+        var num = +input.value;
+        var arr = [100, 25, 10, 5, 1];
+        var str = "";
+
+        for (var i = 0; i < arr.length; i++) {
+          if (num >= arr[i]) {
+            num = num - arr[i];
+            str = str + arr[i] + ",";
+            i--;
+          }
+        }
+
+        input.value =
+          "Amount:" +
+          originalNum +
+          "  Coins: " +
+          str.substring(0, str.length - 1);
+      }
+
+      button.addEventListener("click", amountTocoins);
+    </script>
+  </body>
+</html>

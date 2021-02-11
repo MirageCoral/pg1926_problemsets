@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <head>
+        <title>Show good morning good night wish as per time Javascript</title>
+    </head>
+    <script type="text/javascript">
+        document.write("<center><font size=+3 style='color: green;'>");
+        var day = new Date();
+        var hr = day.getHours();
+        if (hr >= 6 && hr < 10) {
+            document.write("Günaydın!");
+        } else if (hr == 12) {
+            document.write("Good Noon!");
+        } else if (hr >= 10 && hr <= 17) {
+            document.write("İyi Günler!");
+        } else if (hr >= 17 && hr <= 20) {
+            document.write("İyi Akşamlar!");
+        } else if (hr >= 20 && hr <= 24) {
+            document.write("İyi Geceler!");
+        } else {
+            document.write("Esenlikler!");
+        }
+        document.write("</font></center>");
+    </script>
+</html>
+</body>
+</html>
